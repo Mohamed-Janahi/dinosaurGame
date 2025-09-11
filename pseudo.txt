@@ -1,0 +1,25 @@
+T-rex game
+add character
+add obstacles
+add ground
+
+Functions
+set start game
+add button that will start game
+eventlistener
+
+
+set score : 0
+let score change after each obsticle
+
+set high score : 0
+save the highscore
+
+
+set play again
+add button to restart
+eventlistener
+
+
+let character jump when click on screen
+if character hit obsticle game over

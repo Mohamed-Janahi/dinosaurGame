@@ -18,11 +18,14 @@
 ***
 
 
-### ***Screenshots***
+### ***WireFrame***
 
-##### image header 1
-![Smile](
-)
+##### Home page
+![image](./img/project%2011111.png)
+
+
+##### Game page
+![image](./img/project%202222222222222222222222222222.png)
 
 
 
