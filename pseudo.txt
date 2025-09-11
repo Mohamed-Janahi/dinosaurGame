@@ -24,4 +24,5 @@ eventlistener
 let character jump when click on screen
 eventlistener
 
+let character looks like it moving so keep obstacles going to it
 if character hit obsticle game over
