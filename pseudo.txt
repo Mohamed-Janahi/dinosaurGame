@@ -22,4 +22,6 @@ eventlistener
 
 
 let character jump when click on screen
+eventlistener
+
 if character hit obsticle game over
