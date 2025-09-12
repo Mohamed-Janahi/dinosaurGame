@@ -2,19 +2,56 @@ body {
   background-color: antiquewhite;
   font-size: larger;
 }
-body.gamePage {
-  background-color: rgb(64, 64, 111);
+
+.gamePage {
+  background-color: aquamarine;
+  position: relative;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.scoreBar {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.gameArea {
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .ball {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 4rem;
-  width: 4rem;
+  display: inline-block;
+  height: 5rem;
+  width: 5rem;
   border-radius: 50%;
   background-color: #fff;
-  animation: 7s linear infinite backAndForth;
   cursor: pointer;
+}
+
+.obstacle {
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 20%;
+  background-color: #b61414;
+  animation: 7s linear infinite backAndForth;
+}
+
+.repeat {
+  position: fixed;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 80px;
 }
