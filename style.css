@@ -32,14 +32,17 @@ body {
   justify-self: center;
 }
 
-.ball {
+.character {
   display: inline-block;
   height: 5rem;
   width: 5rem;
   border-radius: 50%;
   background-color: #fff;
   cursor: pointer;
-  animation: jump 0.5s linear;
+}
+
+.jump {
+  animation: jump 0.8s linear;
 }
 
 @keyframes jump {
@@ -60,7 +63,7 @@ body {
   width: 2rem;
   border-radius: 20%;
   background-color: #b61414;
-  animation: obstacle 0.9s linear infinite;
+  animation: obstacle 2s linear infinite;
 }
 
 @keyframes obstacle {

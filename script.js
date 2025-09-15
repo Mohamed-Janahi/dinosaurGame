@@ -1,12 +1,38 @@
+//variables:
 const restart = document.querySelector("button.repeat")
-button.addeventlistener("click")
 
-const obstacle = document.querySelector(".obstacle")
+//character ----
+const character = document.querySelector(".character")
+console.log(character)
+
+//game container ----
 const gameArea = document.querySelector(".gameArea")
+console.log(gameArea)
 
-const ball = document.querySelector(".ball")
+//obstacle ------
+const obstacle = document.querySelector(".obstacle")
+console.log(obstacle)
 
-setInterval(ball, 1000)
-console.log(setInterval(ball, 1000))
+//score
+let score = 0
+//scoreDisplay
+//const scoreDisplay = document.querySelector("")
+// console.log()
 
-setInterval(obstacle, 1000)
+//functions
+//function named jump(create a class inside the character named jump) ----- setTimeout(remove the class named jump)
+const jump = () => {
+  if (character.classList != "jump") {
+    character.classList.add("jump")
+    console.log(character)
+    setTimeout(() => {
+      character.classList.remove("jump")
+    }, 1700)
+  }
+}
+
+//add eventlistener for click and call jump function ----- jump()
+document.addEventListener("click", () => {
+  jump()
+  console.log("click")
+})
