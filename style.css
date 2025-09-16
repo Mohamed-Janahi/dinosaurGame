@@ -21,6 +21,7 @@ body {
   right: 1rem;
   display: flex;
   justify-content: space-between;
+  color: #ffffff;
 }
 
 .gameArea {
