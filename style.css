@@ -8,7 +8,6 @@ body {
 
 .gamePage {
   background-color: aquamarine;
-  position: relative;
   height: 120vh;
   margin: 0;
   padding: 0;
@@ -24,54 +23,55 @@ body {
 }
 
 .gameArea {
-  height: 300px;
-  width: 1200px;
-  border: 1px black solid;
-  display: flex;
-  align-items: center;
-  justify-self: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #ffffff;
+  width: 1300px;
+  height: 200px;
+  position: relative;
+  padding: 10px;
 }
 
 .character {
-  display: inline-block;
-  height: 5rem;
-  width: 5rem;
-  border-radius: 50%;
-  background-color: #fff;
-  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  position: relative;
+  top: 110px;
 }
 
 .jump {
-  animation: jump 0.8s linear;
+  animation: jump 0.3s linear;
 }
 
 @keyframes jump {
   0% {
-    transform: translateY(0);
+    top: 110px;
   }
   50% {
-    transform: translateY(-150px);
+    top: 30px;
   }
   100% {
-    transform: translateY(0);
+    top: 110px;
   }
 }
 
 .obstacle {
-  display: inline-block;
-  height: 2rem;
-  width: 2rem;
-  border-radius: 20%;
-  background-color: #b61414;
-  animation: obstacle 2s linear infinite;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: 60px;
+  left: 630px;
+  animation: obstacle 3s linear infinite;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwIKB_N9gWSbdrKFYcejQ4ct6ZaZPfdxHJIg&s);
 }
 
 @keyframes obstacle {
-  from {
-    transform: translateX(1500px);
+  0% {
+    left: 1200px;
   }
-  to {
-    transform: translateX(-5px);
+  100% {
+    left: -635px;
   }
 }
 .repeat {
@@ -81,4 +81,8 @@ body {
   right: 0;
   margin: auto;
   width: 80px;
+}
+
+.title-over {
+  font-size: 3rem;
 }

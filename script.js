@@ -16,7 +16,7 @@ console.log(obstacle)
 //score
 let score = 0
 //scoreDisplay
-//const scoreDisplay = document.querySelector("")
+const scoreDisplay = document.querySelector(".scoreDisplay")
 // console.log()
 
 //functions
@@ -27,9 +27,24 @@ const jump = () => {
     console.log(character)
     setTimeout(() => {
       character.classList.remove("jump")
-    }, 1700)
+    }, 800)
   }
 }
+
+let alive = setInterval(() => {
+  const characterTop = parseInt(
+    window.getComputedStyle(character).getPropertyValue("top")
+  )
+  const obstacleLeft = parseInt(
+    window.getComputedStyle(obstacle).getPropertyValue("left")
+  )
+
+  //630
+  if (obstacleLeft < 180 && obstacleLeft > 0 && characterTop >= 100) {
+    document.querySelector(".title-over").innerText = "GAME OVER!"
+    console.log(document.querySelector(".title-over"))
+  }
+}, 10)
 
 //add eventlistener for click and call jump function ----- jump()
 document.addEventListener("click", () => {
