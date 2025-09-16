@@ -16,9 +16,11 @@ console.log(obstacle)
 //score
 let score = 0
 //scoreDisplay
-const scoreDisplay = document.querySelector(".scoreDisplay")
+const scoreDisplay = document.querySelector(".score")
 // console.log()
-
+const updateScore = () => {
+  scoreDisplay.textContent = `Score: ${score}`
+}
 //playAgain
 const playAgain = document.querySelector(".playAgain")
 console.log(playAgain)
