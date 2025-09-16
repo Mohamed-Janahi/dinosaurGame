@@ -19,6 +19,9 @@ let score = 0
 const scoreDisplay = document.querySelector(".scoreDisplay")
 // console.log()
 
+//playAgain
+const playAgain = document.querySelector(".playAgain")
+console.log(playAgain)
 //functions
 //function named jump(create a class inside the character named jump) ----- setTimeout(remove the class named jump)
 const jump = () => {
@@ -31,23 +34,44 @@ const jump = () => {
   }
 }
 
-let alive = setInterval(() => {
-  const characterTop = parseInt(
-    window.getComputedStyle(character).getPropertyValue("top")
-  )
-  const obstacleLeft = parseInt(
-    window.getComputedStyle(obstacle).getPropertyValue("left")
-  )
+end = document.querySelector(".endGame")
+console.log(end)
 
-  //630
-  if (obstacleLeft < 180 && obstacleLeft > 0 && characterTop >= 100) {
-    document.querySelector(".title-over").innerText = "GAME OVER!"
-    console.log(document.querySelector(".title-over"))
-  }
-}, 10)
+const startGame = () => {
+  gameArea.style.visibility = "visible"
+  end.style.visibility = "hidden"
+  let alive = setInterval(() => {
+    const characterTop = parseInt(
+      window.getComputedStyle(character).getPropertyValue("top")
+    )
+    const obstacleLeft = parseInt(
+      window.getComputedStyle(obstacle).getPropertyValue("left")
+    )
+
+    //630
+    if (obstacleLeft < 180 && obstacleLeft > 0 && characterTop >= 100) {
+      gameOver()
+    }
+  }, 10)
+}
+
+const gameOver = () => {
+  end.style.visibility = "visible"
+  gameArea.style.visibility = "hidden"
+
+  clearInterval(alive)
+}
 
 //add eventlistener for click and call jump function ----- jump()
 document.addEventListener("click", () => {
   jump()
   console.log("click")
 })
+
+if (playAgain) {
+  playAgain.addEventListener("click", () => {
+    startGame()
+  })
+}
+
+startGame()
