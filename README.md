@@ -1,4 +1,4 @@
-# T-rex game
+# Steak Run game
 
 ## Date: 9/11/2025
 
@@ -10,6 +10,9 @@
 ### ***Description***
 #### I will be building my own version of the famous GOOGLE dinosaur game.
 ***
+
+### Deployed Version
+#### [SteakRun](https://wiggly-view.surge.sh/)
 
 ### ***Technologies Used***
 * HTML
