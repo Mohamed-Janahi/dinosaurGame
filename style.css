@@ -1,9 +1,11 @@
 body {
-  background-color: antiquewhite;
+  background-image: url(https://images.alphacoders.com/438/438979.jpg);
   font-size: larger;
   align-items: center;
   justify-content: center;
   display: flex;
+  font-size: xx-large;
+  color: #ffffff;
 }
 
 .gamePage {
