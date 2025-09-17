@@ -16,14 +16,13 @@ console.log(obstacle)
 //score
 let score = 0
 //scoreDisplay
-const scoreDisplay = document.querySelector(".score")
+const scoreDisplay = document.querySelector(".scoreDisplay")
 // console.log()
-const updateScore = () => {
-  scoreDisplay.textContent = `Score: ${score}`
-}
 //playAgain
 const playAgain = document.querySelector(".playAgain")
 console.log(playAgain)
+
+let alive
 //functions
 //function named jump(create a class inside the character named jump) ----- setTimeout(remove the class named jump)
 const jump = () => {
@@ -40,9 +39,10 @@ end = document.querySelector(".endGame")
 console.log(end)
 
 const startGame = () => {
+  score = 0
   gameArea.style.visibility = "visible"
   end.style.visibility = "hidden"
-  let alive = setInterval(() => {
+  alive = setInterval(() => {
     const characterTop = parseInt(
       window.getComputedStyle(character).getPropertyValue("top")
     )
@@ -51,16 +51,19 @@ const startGame = () => {
     )
 
     //630
-    if (obstacleLeft < 180 && obstacleLeft > 0 && characterTop >= 100) {
+    if (obstacleLeft < 100 && obstacleLeft > 0 && characterTop >= 100) {
       gameOver()
     }
+
+    console.log(scoreDisplay)
+    score++
+    scoreDisplay.innerText = score
   }, 10)
 }
 
 const gameOver = () => {
   end.style.visibility = "visible"
   gameArea.style.visibility = "hidden"
-
   clearInterval(alive)
 }
 
