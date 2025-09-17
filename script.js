@@ -23,8 +23,7 @@ const playAgain = document.querySelector(".playAgain")
 console.log(playAgain)
 
 let alive
-//functions
-//function named jump(create a class inside the character named jump) ----- setTimeout(remove the class named jump)
+
 const jump = () => {
   if (character.classList != "jump") {
     character.classList.add("jump")
@@ -50,7 +49,6 @@ const startGame = () => {
       window.getComputedStyle(obstacle).getPropertyValue("left")
     )
 
-    //630
     if (obstacleLeft < 100 && obstacleLeft > 0 && characterTop >= 100) {
       gameOver()
     }
@@ -67,7 +65,6 @@ const gameOver = () => {
   clearInterval(alive)
 }
 
-//add eventlistener for click and call jump function ----- jump()
 document.addEventListener("click", () => {
   jump()
   console.log("click")

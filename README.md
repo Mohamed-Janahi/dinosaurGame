@@ -21,11 +21,11 @@
 ### ***WireFrame***
 
 ##### Home page
-![image](./img/project%2011111.png)
+![image](./img/steakrunhome.png)
 
 
 ##### Game page
-![image](./img/project%202222222222222222222222222222.png)
+![image](./img/steakrungame.png)
 
 
 
